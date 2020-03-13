@@ -1,0 +1,383 @@
+@font-face {
+    font-family: 'Proxima-Nova';
+    src: url('../fonts/ProximaNova/ProximaNova-Semibold.eot');
+    url('../fonts/ProximaNova/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova/ProximaNova-Semibold.woff') format('woff'),
+    url('../fonts/ProximaNova/ProximaNova-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova/ProximaNovaCond-Regular.eot');
+    url('../fonts/ProximaNova/ProximaNovaCond-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProximaNova/ProximaNovaCond-Regular.woff') format('woff'),
+    url('../fonts/ProximaNova/ProximaNovaCond-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/*100 Thin*/
+/*200 Extra Light*/
+/*300 Light*/
+/*400 Normal*/
+/*500 Medium*/
+/*600 Semi Bold*/
+/*700 Bold*/
+/*800 Extra Bold*/
+/*900 Ultra Bold*/
+body {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 15px;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, .subtitle {
+    text-transform: uppercase;
+}
+h1, .h1 {
+    font-size: 45px;
+    color: #b18369;
+    letter-spacing: 3.5px;
+}
+h2, .h2 {
+    font-size: 42px;
+    letter-spacing: -0.8px;
+}
+h3, .h3 {
+    font-size: 22px;
+}
+h4, .h4 {
+    font-size: 18px;
+}
+.subtitle {
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+@media (min-width: 1199px) {
+    .container {
+        max-width: 1370px;
+    }
+}
+a {
+    text-decoration: none !important;
+}
+.main-btn {
+    font-family: 'Playfair Display SC', serif;
+    display: inline-block;
+    text-transform: uppercase;
+    min-width: 216px;
+    border: 2px solid;
+    padding: 12px 20px;
+    text-align: center;
+}
+.main-btn:active,
+.main-btn:focus
+{
+    outline: none;
+}
+/*Hamburger-btn*/
+.hamburger {
+    padding: 20px 16px 10px;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+    z-index: 15;
+    outline: none;
+}
+.hamburger:focus {
+    outline: none;
+}
+.hamburger:hover {
+    opacity: 0.7;
+}
+.hamburger.is-active:hover {
+    opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: #b18369;
+}
+.hamburger-box {
+    width: 31px;
+    height: 28px;
+    display: inline-block;
+    position: relative;
+}
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 31px;
+    height: 5px;
+    background-color: #b18369;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+}
+.hamburger-inner::before {
+    top: -10px;
+}
+.hamburger-inner::after {
+    bottom: -10px;
+}
+.hamburger--elastic .hamburger-inner {
+    top: 2px;
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: .9s;
+}
+.hamburger--elastic .hamburger-inner::before {
+    top: 11px;
+    transition: opacity 0.125s 0.275s ease;
+}
+.hamburger--elastic .hamburger-inner::after {
+    top: 22px;
+    transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.hamburger--elastic.is-active .hamburger-inner {
+    transform: translate3d(0, 5px, 0) rotate(135deg);
+    transition-delay: 0.075s;
+    top: 8px;
+}
+.hamburger--elastic.is-active .hamburger-inner::before {
+    transition-delay: 0s;
+    opacity: 0;
+}
+.hamburger--elastic.is-active .hamburger-inner::after {
+    transform: translate3d(0, -22px, 0) rotate(-270deg);
+    transition-delay: 0.075s;
+}
+
+/*Style for Header*/
+.header {
+    padding-top: 30px;
+    margin-bottom: 33px;
+    position: relative;
+}
+.header__logo img {
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.header__user-panel a {
+    margin-right: 22px;
+}
+.header__user-panel i {
+    color: #000000;
+    font-size: 25px;
+    transition: .4s;
+}
+/*Style for Carousel*/
+.carousel {
+    margin-bottom: 39px;
+}
+.carousel__foto {
+    width: 100%;
+    max-height: 725px;
+    object-fit: cover;
+    object-position: center;
+}
+/*Style for swimwear*/
+.swimwear {
+    margin-bottom: 65px;
+}
+.swimwear__main-title {
+    margin-bottom: 77px;
+}
+.swimwear__bg {
+    background: #f9f5f3;
+}
+.swimwear__second-title:after {
+    content: '';
+    position: absolute;
+    width: calc(50% - 8px);
+    height: 2px;
+    background: #b18369;
+    top: 86px;
+    left: 0;
+
+}
+.swimwear__description {
+    background: #f1d4cc;
+    font-size: 25px;
+    padding: 44px 75px 42px 48px;
+    text-transform: uppercase;
+    color: #b18369;
+    letter-spacing: -0.4px;
+    line-height: 1.3;
+    position: relative;
+    bottom: 93px;
+}
+.swimwear__sub-description {
+    background: #111;
+    font-size: 20px;
+    position: absolute;
+    bottom: -23px;
+    padding: 10px 16px 10px 20px;
+    right: 0;
+}
+.swimwear__cards {
+    position: relative;
+    margin-top: -41px;
+}
+.swimwear__card-wrap {
+    position: relative;
+}
+.swimwear__card-img {
+    height: 395px;
+}
+.swimwear__card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+}
+.swimwear__card-title, .swimwear__card-subtitle {
+    font-size: 22px;
+    color: #111111;
+    text-transform: uppercase;
+    letter-spacing: -0.4px;
+}
+.swimwear__card-title {
+    position: relative;
+    padding: 20px 0 35px 0;
+}
+.swimwear__card-subtitle {
+    color: #b18369;
+    position: absolute;
+    bottom: 0;
+}
+.swimwear__card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.swimwear__card-wrap:hover .swimwear__card-subtitle {
+    opacity: 0.7;
+}
+/*Style for photos*/
+.photos {
+    margin-bottom: 73px;
+}
+.photos__title {
+    letter-spacing: -0.3px;
+    padding: 12px 21px 10px;
+    color: #b18369;
+    background: #111;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.photos__wrapper {
+    flex: 0 0 calc(20% - 13px);
+    max-width: calc(20% - 13px);
+    height: 270px;
+}
+.photos__wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*Style for footer*/
+.footer {
+    padding-top: 40px;
+    background: #f9f5f3;
+}
+.footer__menu-title {
+    letter-spacing: -0.3px;
+    margin-bottom: 18px;
+}
+.footer__menu li {
+    margin-bottom: 6px;
+}
+.footer__menu a {
+    text-transform: uppercase;
+    color: #b18369;
+    letter-spacing: -0.3px;
+}
+.footer__menu-first {
+    margin-right: 89px;
+}
+.footer__menu-subtitle {
+    line-height: 1.3;
+    font-size: 15px;
+    color: #111111;
+    text-transform: uppercase;
+    letter-spacing: -0.4px;
+    padding: 1px 19px 0 2px;
+}
+.footer__menu-subtitle-second {
+    margin-bottom: 19px;
+}
+.footer__input {
+    padding: 13px 10px 10px 21px;
+    min-width: 310px;
+    border: none;
+}
+.footer__input:focus {
+    outline: none;
+    font-size: 18px;
+}
+.footer__input, .footer__input::placeholder {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #b18369;
+    letter-spacing: -0.4px;
+}
+.footer__btn {
+    background: #b18369;
+    padding: 11px 17px;
+    border-radius: 0;
+    color: #fff;
+}
+.footer__btn:focus,
+.footer__btn:hover {
+    outline: none;
+    color: #fff;
+    box-shadow:none;
+}
+.footer__social li {
+    margin-right: 21px;
+}
+.footer__social i {
+    font-size: 39px;
+    color: #111111;
+    transition: .4s;
+}
+.footer__social a:hover i,
+.header__user-panel a:hover i {
+    color: #b18369;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
